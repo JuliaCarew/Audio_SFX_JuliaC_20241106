@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerBehaviors : MonoBehaviour
 {
     // Key Audio
-    AudioSource C4;
+    public AudioClip C4;
     // Music Audio
     AudioSource music;
     public GameObject musicBox;
@@ -18,17 +18,17 @@ public class TriggerBehaviors : MonoBehaviour
     {
         music = GameObject.Find("musicBox").GetComponent<AudioSource>();
 
-        C4 = GameObject.Find("CubeC1").GetComponent<AudioSource>();
+        C4 = GameObject.Find("CubeC1").GetComponent<AudioClip>();
 
         music.Play();
         Debug.Log("Music Playing");
-        C4 = GetComponent<AudioSource>();
+        C4 = GetComponent<AudioClip>();
         notePressed = false;
     }
     private void OnTriggerEnter(Collider other)
     {
         notePressed = true;
-        C4.Play();
+        //C4.isReadyToPlay();
         Debug.Log("C1 Play");
     }
     private void OnTriggerStay(Collider other)
@@ -47,14 +47,5 @@ public class TriggerBehaviors : MonoBehaviour
             Debug.Log("music unpaused");
         }      
     }
-    /*
-    public void ChangeKeyPlayedColor()
-    {
-        if (notePressed == true)
-        {
-            keyMaterial.color = keyPressed;
-        }
-    }
-    */
 }
 // getting the error ArgumentNullException: Value cannot be null
