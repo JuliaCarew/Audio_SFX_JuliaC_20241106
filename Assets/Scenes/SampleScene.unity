@@ -3939,6 +3939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b8da7291f59134c92f5e640df78022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  C4: {fileID: 0}
   musicBox: {fileID: 2081079862}
   CubeC1: {fileID: 482200595}
   notePressed: 0
@@ -6510,6 +6511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b8da7291f59134c92f5e640df78022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  C4: {fileID: 0}
   musicBox: {fileID: 0}
   CubeC1: {fileID: 482200595}
   notePressed: 0
